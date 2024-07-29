@@ -21,7 +21,6 @@ public class SampleTwoSum {
                 return new int[]{numbers.get(result), i};
             }
             numbers.put(nums[i], i);
-            System.out.println(numbers);
         }
         return null;
     }
