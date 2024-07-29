@@ -14,6 +14,15 @@ public class SampleTwoSum {
     }
 
     public static int[] calculTwoSum(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> numbers = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int result = target - nums[i];
+            if (numbers.containsKey(result)) {
+                return new int[]{numbers.get(result), i};
+            }
+            numbers.put(nums[i], i);
+            System.out.println(numbers);
+        }
+        return null;
     }
 }
